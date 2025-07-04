@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(48, 100%, 99%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(160, 84%, 39%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(45, 93%, 47%);
+  --accent-foreground: hsl(26, 83%, 14%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.75rem;
+
+  /* Custom BlouseConnect colors */
+  --emerald-600: hsl(160, 84%, 39%);
+  --emerald-700: hsl(160, 84%, 32%);
+  --royal-600: hsl(217, 91%, 60%);
+  --royal-700: hsl(217, 91%, 53%);
+  --golden-400: hsl(45, 93%, 58%);
+  --golden-500: hsl(45, 93%, 47%);
+  --cream-50: hsl(48, 100%, 99%);
+  --cream-100: hsl(45, 86%, 81%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(160, 84%, 39%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .pattern-border {
+    border-image: linear-gradient(45deg, var(--golden-500), var(--emerald-600), var(--royal-600), var(--golden-500)) 1;
+  }
+  
+  .cultural-shadow {
+    box-shadow: 0 10px 25px hsla(45, 93%, 47%, 0.1), 0 4px 6px hsla(160, 84%, 39%, 0.05);
+  }
+  
+  .ethnic-gradient {
+    background: linear-gradient(135deg, var(--cream-100) 0%, var(--cream-50) 50%, hsl(0, 100%, 97%) 100%);
+  }
+
+  .emerald-600 {
+    color: var(--emerald-600);
+  }
+
+  .emerald-700 {
+    color: var(--emerald-700);
+  }
+
+  .royal-600 {
+    color: var(--royal-600);
+  }
+
+  .royal-700 {
+    color: var(--royal-700);
+  }
+
+  .golden-400 {
+    color: var(--golden-400);
+  }
+
+  .golden-500 {
+    color: var(--golden-500);
+  }
+
+  .bg-emerald-600 {
+    background-color: var(--emerald-600);
+  }
+
+  .bg-emerald-700 {
+    background-color: var(--emerald-700);
+  }
+
+  .bg-royal-600 {
+    background-color: var(--royal-600);
+  }
+
+  .bg-royal-700 {
+    background-color: var(--royal-700);
+  }
+
+  .bg-golden-400 {
+    background-color: var(--golden-400);
+  }
+
+  .bg-golden-500 {
+    background-color: var(--golden-500);
+  }
+
+  .bg-cream-50 {
+    background-color: var(--cream-50);
+  }
+
+  .bg-cream-100 {
+    background-color: var(--cream-100);
+  }
+
+  .border-emerald-600 {
+    border-color: var(--emerald-600);
+  }
+
+  .border-royal-600 {
+    border-color: var(--royal-600);
+  }
+
+  .border-golden-400 {
+    border-color: var(--golden-400);
+  }
+
+  .hover\:bg-emerald-700:hover {
+    background-color: var(--emerald-700);
+  }
+
+  .hover\:bg-royal-700:hover {
+    background-color: var(--royal-700);
+  }
+
+  .hover\:text-emerald-600:hover {
+    color: var(--emerald-600);
+  }
+
+  .hover\:text-royal-600:hover {
+    color: var(--royal-600);
+  }
+
+  .hover\:border-golden-400:hover {
+    border-color: var(--golden-400);
+  }
+
+  .from-emerald-600 {
+    --tw-gradient-from: var(--emerald-600);
+  }
+
+  .to-royal-600 {
+    --tw-gradient-to: var(--royal-600);
+  }
+
+  .from-emerald-700 {
+    --tw-gradient-from: var(--emerald-700);
+  }
+
+  .to-royal-700 {
+    --tw-gradient-to: var(--royal-700);
+  }
+
+  .from-cream-100 {
+    --tw-gradient-from: var(--cream-100);
+  }
+
+  .from-cream-50 {
+    --tw-gradient-from: var(--cream-50);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--emerald-600);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--emerald-700);
+}
